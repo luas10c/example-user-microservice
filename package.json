@@ -1,0 +1,24 @@
+{
+  "name": "grpc",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development tsx watch src/server.ts",
+    "migrate": "dotenv -e .env.development -- prisma migrate dev --schema src/prisma/schema.prisma",
+    "type:check": "tsc --project tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.6.10",
+    "@prisma/client": "^4.2.1"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/node": "^18.7.8",
+    "cross-env": "^7.0.3",
+    "dotenv-cli": "^6.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "prisma": "^4.2.1",
+    "tsx": "^3.8.2",
+    "typescript": "^4.7.4"
+  }
+}
